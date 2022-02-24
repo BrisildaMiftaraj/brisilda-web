@@ -18,13 +18,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex h='120px' borderBottom='1px solid rgba(229, 229, 229, 0.76)' alignItems='center' p='20'>
-        <Box><Image width={290} height={100} layout='fixed' src='/logo.png' /></Box>
+        <Box><Image width={290} height={100} layout='fixed' src='/logo.png' alt='Logo' /></Box>
         <Spacer />
         <HStack spacing='20'>
           {['home', 'about', 'services', 'portfolio'].map(link => (
-            <Link href={`/${link}`}>
+            <Link href={`/${link}`} key={link} passHref>
               <ChakraLink
-                key={link}
                 color='#ABA4A4'
                 pos='relative'
                 transition='all 300ms'
@@ -55,17 +54,17 @@ const Home: NextPage = () => {
           ))}
           <HStack spacing='10'>
             <Box _hover={{ opacity: 0.5, cursor: 'pointer' }} >
-              <Link href='/'>
+              <Link href='/' passHref>
                 <Facebook />
               </Link>
             </Box>
             <Box _hover={{ opacity: 0.5, cursor: 'pointer' }} >
-              <Link href='/'>
+              <Link href='/' passHref>
                 <Twitter />
               </Link>
             </Box>
             <Box _hover={{ opacity: 0.5, cursor: 'pointer' }} >
-              <Link href='/'>
+              <Link href='/' passHref>
                 <Instagram />
               </Link>
             </Box>
@@ -135,7 +134,7 @@ const Home: NextPage = () => {
           </Box>
           <Spacer />
           <Box pr="41px">
-            <Image width='500px' height='551px' src='/brisilda.png' />
+            <Image width='500px' height='551px' src='/brisilda.png' alt='Me' />
           </Box>
         </HStack>
       </Box>

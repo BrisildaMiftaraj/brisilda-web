@@ -1,6 +1,6 @@
 import { chakra } from '@chakra-ui/react'
 
-export default () => {
+export const PageAccent = () => {
   return (
     <chakra.svg width="267" height="603" viewBox="0 0 267 603" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M183.234 387.295C297.764 453.863 237.603 508.135 125.514 559.985C50.3263 594.765 3.3625 538.869 -32.3453 461.676C-68.0531 384.483 5.24777 274.608 80.4358 239.828C155.624 205.048 68.7045 320.728 183.234 387.295Z" fill="#FFC13D" />
@@ -8,3 +8,5 @@ export default () => {
     </chakra.svg>
   )
 }
+
+export default PageAccent
